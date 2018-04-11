@@ -3,18 +3,22 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { FilterPipe } from './filter.pipe';
-
+import { PipesModule } from './pipes/pipes.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    FilterPipe
+    AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    PipesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+// npm login
+// npm run packagr
+// npm pack
+// npm publish dist
