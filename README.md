@@ -1,6 +1,12 @@
 # [WNg5](https://github.com/wquintanilhadasilva/w-ng5)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
+This project [WNg5](https://github.com/wquintanilhadasilva/w-ng5) was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
+
+He contains web components witch goals acelerate web devolper using Angular 5x
+
+## Composition package
+
+* Generic Filter for using in directives ngFor
 
 ## Development server
 
