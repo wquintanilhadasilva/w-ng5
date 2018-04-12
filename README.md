@@ -28,15 +28,15 @@ In the next step, add in declare section of app.module:
 
 And, enjoy....
 
-  <section>
-    <label>Filtro de String</label>
-    <input type="text"  [(ngModel)]="filtroString">
-    <ul>
-      <li *ngFor="let s of getStrings() | filter:filtroString">
-        {{s}}
-      </li>
-    </ul>
-  </section>
+    <section>
+      <label>Filtro de String</label>
+      <input type="text"  [(ngModel)]="filtroString">
+      <ul>
+        <li *ngFor="let s of getStrings() | filter:filtroString">
+          {{s}}
+        </li>
+      </ul>
+    </section>
 
   <section>
     <label>Filtro de String Complexa</label>
