@@ -37,9 +37,8 @@ And, enjoy....
       </li>
     </ul>
 
-### Filtro de String Complexa
+### Filtro de String Complexa - Valor Nível 2
 
-    <label>Filtro de String Complexa</label>
     <input type="text"  [(ngModel)]="search">
     <ul>
       <li *ngFor="let s of getComplexTypesExtends() | filter:[{field:'n1.n2.valor2', value: search}]">
@@ -47,7 +46,7 @@ And, enjoy....
       </li>
     </ul>
 
-### Filtro de String Complexa - Campo no meio
+### Filtro de String Complexa - Campo no meio - Valor Nível 1
 
       <input type="text"  [(ngModel)]="search3">
       <ul>
@@ -56,7 +55,7 @@ And, enjoy....
         </li>
       </ul>
 
-### Filtro de Array complexo simples
+### Filtro de Array complexo simples - Nome Nível 0
 
       <input type="text"  [(ngModel)]="search2">
       <ul>
@@ -65,11 +64,19 @@ And, enjoy....
         </li>
       </ul>
 
-### Filtro campo que não existe
-
-      <input type="text"  [(ngModel)]="search2">
+### Filtro em três campos - Valor Nível 2 ou Valor Nível 1 ou Nome Nível 0
+      <input type="text"  [(ngModel)]="search5">
       <ul>
-        <li *ngFor="let s of getComplexTypesExtends() | filter:[{field:'n1.n2.n3.valor3', value: search2}]">
+        <li *ngFor="let s of getComplexTypesExtends() | filter:[{field:'n1.n2.valor2', value: search5}, {field:'n1.valor1', value: search5}, {field:'nome', value: search5}]">
+          {{s.nome}} - {{s.idade}} - {{s.n1.valor1}} - {{s.n1.n2.valor2}}
+        </li>
+      </ul>
+
+### Filtro campo que não existe - Valor Nível 3
+
+      <input type="text"  [(ngModel)]="search4">
+      <ul>
+        <li *ngFor="let s of getComplexTypesExtends() | filter:[{field:'n1.n2.n3.valor3', value: search4}]">
           {{s.nome}} - {{s.idade}} - {{s.n1.valor1}} - {{s.n1.n2.valor2}}
         </li>
       </ul>
