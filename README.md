@@ -8,7 +8,7 @@ He contains web components witch goals acelerate web devolper using Angular 5x
 
 * Generic Filter for using in directives ngFor
 
-## Sample use
+## How to install and configure
 
 For use this components, before, install this package with npm:
 
@@ -28,7 +28,9 @@ In the next step, add in declare section of app.module:
 
 And, enjoy....
 
-### Filtro de String Simples
+## Sample use
+
+### Filtering simple string
 
     <input type="text"  [(ngModel)]="filtroString">
     <ul>
@@ -37,7 +39,7 @@ And, enjoy....
       </li>
     </ul>
 
-### Filtro de String Complexa - Valor Nível 2
+### Filtering complex string - Value Nivel 2
 
     <input type="text"  [(ngModel)]="search">
     <ul>
@@ -46,7 +48,7 @@ And, enjoy....
       </li>
     </ul>
 
-### Filtro de String Complexa - Campo no meio - Valor Nível 1
+### Filtering complex string - Middle Field - Value nivel 1
 
       <input type="text"  [(ngModel)]="search3">
       <ul>
@@ -55,7 +57,7 @@ And, enjoy....
         </li>
       </ul>
 
-### Filtro de Array complexo simples - Nome Nível 0
+### Filtering complex array simple - field 'Nome' Nivel 0
 
       <input type="text"  [(ngModel)]="search2">
       <ul>
@@ -64,7 +66,7 @@ And, enjoy....
         </li>
       </ul>
 
-### Filtro em três campos - Valor Nível 2 ou Valor Nível 1 ou Nome Nível 0
+### Filtering in tree fields - field 'Valor' in nivel 2 or 'Valor' in nivel 1 or 'Nome' in nivel 0
       <input type="text"  [(ngModel)]="search5">
       <ul>
         <li *ngFor="let s of getComplexTypesExtends() | filter:[{field:'n1.n2.valor2', value: search5}, {field:'n1.valor1', value: search5}, {field:'nome', value: search5}]">
