@@ -1,6 +1,6 @@
 {
   "name": "w-ng5",
-  "version": "0.0.9",
+  "version": "0.0.9b2",
   "license": "MIT",
   "scripts": {
     "ng": "ng",

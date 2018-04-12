@@ -8,26 +8,79 @@ He contains web components witch goals acelerate web devolper using Angular 5x
 
 * Generic Filter for using in directives ngFor
 
-## Development server
+## Sample use
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+For use this components, before, install this package with npm:
 
-## Code scaffolding
+  npm install w-ng5 --save
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+After, import module in app.module
 
-## Build
+  import { PipesModule } from './pipes/pipes.module';
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+In the next step, add in declare section of app.module:
 
-## Running unit tests
+  imports: [
+    BrowserModule,
+    PipesModule,
+    ...
+  ]
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+And, enjoy....
 
-## Running end-to-end tests
+  <section>
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+  <label>Filtro de String</label>
+  <input type="text"  [(ngModel)]="filtroString">
 
-## Further help
+  <ul>
+    <li *ngFor="let s of getStrings() | filter:filtroString">
+      {{s}}
+    </li>
+  </ul>
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+  </section>
+
+  <section>
+    <label>Filtro de String Complexa</label>
+    <input type="text"  [(ngModel)]="search">
+
+    <ul>
+      <li *ngFor="let s of getComplexTypesExtends() | filter:[{field:'n1.n2.valor2', value: search}]">
+        {{s.nome}} - {{s.idade}} - {{s.n1.valor1}} - {{s.n1.n2.valor2}}
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <label>Filtro de String Complexa - Campo no meio</label>
+    <input type="text"  [(ngModel)]="search3">
+
+    <ul>
+      <li *ngFor="let s of getComplexTypesExtends() | filter:[{field:'n1.valor1', value: search3}]">
+        {{s.nome}} - {{s.idade}} - {{s.n1.valor1}} - {{s.n1.n2.valor2}}
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <label>Filtro de Array complexo simples</label>
+    <input type="text"  [(ngModel)]="search2">
+
+    <ul>
+      <li *ngFor="let s of getComplexTypesExtends() | filter:[{field:'nome', value: search2}]">
+        {{s.nome}} - {{s.idade}} - {{s.n1.valor1}} - {{s.n1.n2.valor2}}
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <label>Filtro campo que não existe</label>
+    <input type="text"  [(ngModel)]="search2">
+
+    <ul>
+      <li *ngFor="let s of getComplexTypesExtends() | filter:[{field:'n1.n2.n3.valor3', value: search2}]">
+        {{s.nome}} - {{s.idade}} - {{s.n1.valor1}} - {{s.n1.n2.valor2}}
+      </li>
+    </ul>
+  </section>

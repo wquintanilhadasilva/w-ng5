@@ -1,4 +1,4 @@
-import { Pipe, PipeTransform } from '@angular/core';
+/*import { Pipe, PipeTransform } from '@angular/core';
 
 export interface FilterParam {
   field: string;
@@ -59,4 +59,4 @@ export class FilterPipe implements PipeTransform {
   }
 
 
-}
+}*/
