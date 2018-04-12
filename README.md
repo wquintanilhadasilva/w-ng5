@@ -38,42 +38,42 @@ And, enjoy....
       </ul>
     </section>
 
-  <section>
-    <label>Filtro de String Complexa</label>
-    <input type="text"  [(ngModel)]="search">
-    <ul>
-      <li *ngFor="let s of getComplexTypesExtends() | filter:[{field:'n1.n2.valor2', value: search}]">
-        {{s.nome}} - {{s.idade}} - {{s.n1.valor1}} - {{s.n1.n2.valor2}}
-      </li>
-    </ul>
-  </section>
+    <section>
+      <label>Filtro de String Complexa</label>
+      <input type="text"  [(ngModel)]="search">
+      <ul>
+        <li *ngFor="let s of getComplexTypesExtends() | filter:[{field:'n1.n2.valor2', value: search}]">
+          {{s.nome}} - {{s.idade}} - {{s.n1.valor1}} - {{s.n1.n2.valor2}}
+        </li>
+      </ul>
+    </section>
 
-  <section>
-    <label>Filtro de String Complexa - Campo no meio</label>
-    <input type="text"  [(ngModel)]="search3">
-    <ul>
-      <li *ngFor="let s of getComplexTypesExtends() | filter:[{field:'n1.valor1', value: search3}]">
-        {{s.nome}} - {{s.idade}} - {{s.n1.valor1}} - {{s.n1.n2.valor2}}
-      </li>
-    </ul>
-  </section>
+    <section>
+      <label>Filtro de String Complexa - Campo no meio</label>
+      <input type="text"  [(ngModel)]="search3">
+      <ul>
+        <li *ngFor="let s of getComplexTypesExtends() | filter:[{field:'n1.valor1', value: search3}]">
+          {{s.nome}} - {{s.idade}} - {{s.n1.valor1}} - {{s.n1.n2.valor2}}
+        </li>
+      </ul>
+    </section>
 
-  <section>
-    <label>Filtro de Array complexo simples</label>
-    <input type="text"  [(ngModel)]="search2">
-    <ul>
-      <li *ngFor="let s of getComplexTypesExtends() | filter:[{field:'nome', value: search2}]">
-        {{s.nome}} - {{s.idade}} - {{s.n1.valor1}} - {{s.n1.n2.valor2}}
-      </li>
-    </ul>
-  </section>
+    <section>
+      <label>Filtro de Array complexo simples</label>
+      <input type="text"  [(ngModel)]="search2">
+      <ul>
+        <li *ngFor="let s of getComplexTypesExtends() | filter:[{field:'nome', value: search2}]">
+          {{s.nome}} - {{s.idade}} - {{s.n1.valor1}} - {{s.n1.n2.valor2}}
+        </li>
+      </ul>
+    </section>
 
-  <section>
-    <label>Filtro campo que não existe</label>
-    <input type="text"  [(ngModel)]="search2">
-    <ul>
-      <li *ngFor="let s of getComplexTypesExtends() | filter:[{field:'n1.n2.n3.valor3', value: search2}]">
-        {{s.nome}} - {{s.idade}} - {{s.n1.valor1}} - {{s.n1.n2.valor2}}
-      </li>
-    </ul>
-  </section>
+    <section>
+      <label>Filtro campo que não existe</label>
+      <input type="text"  [(ngModel)]="search2">
+      <ul>
+        <li *ngFor="let s of getComplexTypesExtends() | filter:[{field:'n1.n2.n3.valor3', value: search2}]">
+          {{s.nome}} - {{s.idade}} - {{s.n1.valor1}} - {{s.n1.n2.valor2}}
+        </li>
+      </ul>
+    </section>
