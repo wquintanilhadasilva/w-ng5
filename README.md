@@ -12,19 +12,19 @@ He contains web components witch goals acelerate web devolper using Angular 5x
 
 For use this components, before, install this package with npm:
 
-  npm install w-ng5 --save
+    npm install w-ng5 --save
 
 After, import module in app.module
 
-  import { PipesModule } from './pipes/pipes.module';
+    import { PipesModule } from 'w-ng5';
 
 In the next step, add in declare section of app.module:
 
-  imports: [
-    BrowserModule,
-    PipesModule,
-    ...
-  ]
+    imports: [
+      BrowserModule,
+      PipesModule,
+      ...
+    ]
 
 And, enjoy....
 
