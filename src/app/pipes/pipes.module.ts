@@ -27,7 +27,7 @@ export class FilterPipe implements PipeTransform {
     if (!values || !filter) {
       return values;
     }
-    return values.filter(item => item.indexOf(filter) !== -1);
+    return values.filter(item => item.toString().toLowerCase().indexOf(filter.toString().toLowerCase()) !== -1);
   }
 
   private checkComplexType(values, filter: Array<FilterParam>): any {
@@ -82,7 +82,7 @@ export class FilterPipe implements PipeTransform {
     if (indexFind === fieldFind.length - 1) {
       // Se tiver valor, confere se contém o que está procurando...
       if (ref) {
-        return ref.indexOf(search) !== -1;
+        return ref.toString().toLowerCase().indexOf(search.toString().toLowerCase()) !== -1;
       } else {
         return false;
       }

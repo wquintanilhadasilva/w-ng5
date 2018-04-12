@@ -38,7 +38,7 @@ export class AppComponent {
       objeto['idade'] = i;
 
       const N1 = new Object();
-      N1['valor1'] = `valor N1 ${i}`;
+      N1['valor1'] = `Nível1 N1 ${i}`;
 
       const N2 = new Object();
       N2['valor2'] = `valor N2 ${i}`;
