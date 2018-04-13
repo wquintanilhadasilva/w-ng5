@@ -6,6 +6,10 @@ Angular Generic Filters to *ngFor
 
 Filter records of your listings with simple strings using a single field or multiple fields on plan objects. Filter also by using fields in non-plan structured objects by observing one or more attributes or sub-attributes of these objects by browsing their OGNL properties.
 
+# Details
+
+Details about this project and user tutorial
+
 ## Composition package
 
 * Generic Filter for using in directives ngFor
