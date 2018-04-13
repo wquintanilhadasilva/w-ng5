@@ -1,4 +1,4 @@
-# w-ng5 accelerator WebComponents
+# w-ng5 accelerator web components
 
 Angular Generic Filters to *ngFor
 
