@@ -1,8 +1,6 @@
 # [WNg5](https://github.com/wquintanilhadasilva/w-ng5)
 
-This project [WNg5](https://github.com/wquintanilhadasilva/w-ng5) was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
-
-He contains web components witch goals acelerate web devolper using Angular 5x
+This project contains web components witch goals acelerate web devolper using Angular like Filters to *ngFor, Collapsed Forms & Panels and others
 
 ## Composition package
 
@@ -77,3 +75,8 @@ And, enjoy....
         {{s.nome}} - {{s.idade}} - {{s.n1.valor1}} - {{s.n1.n2.valor2}}
       </li>
     </ul>
+
+
+# Project info - source code
+
+This project is stored in [WNg5](https://github.com/wquintanilhadasilva/w-ng5) and was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.6.
