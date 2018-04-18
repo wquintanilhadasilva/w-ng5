@@ -44,7 +44,7 @@ And, enjoy....
       </li>
     </ul>
 
-### Filtering complex string - field 'Value' in nivel 2
+### Filtering complex string - field 'Value' in level 2
     <input type="text"  [(ngModel)]="search">
     <ul>
       <li *ngFor="let s of getComplexTypesExtends() | filter:[{field:'n1.n2.valor2', value: search}]">
@@ -52,7 +52,7 @@ And, enjoy....
       </li>
     </ul>
 
-### Filtering complex string - middle field - 'Value' in nivel 1
+### Filtering complex string - middle field - 'Value' in level 1
     <input type="text"  [(ngModel)]="search3">
     <ul>
       <li *ngFor="let s of getComplexTypesExtends() | filter:[{field:'n1.valor1', value: search3}]">
@@ -60,7 +60,7 @@ And, enjoy....
       </li>
     </ul>
 
-### Filtering complex array simple - field 'Nome' Nivel 0
+### Filtering complex array simple - field 'Nome' level 0
     <input type="text"  [(ngModel)]="search2">
     <ul>
       <li *ngFor="let s of getComplexTypesExtends() | filter:[{field:'nome', value: search2}]">
@@ -68,7 +68,7 @@ And, enjoy....
       </li>
     </ul>
 
-### Filtering in tree fields - field 'Valor' in nivel 2 or 'Valor' in nivel 1 or 'Nome' in nivel 0
+### Filtering in tree fields - field 'Valor' in level 2 or 'Valor' in level 1 or 'Nome' in level 0
     <input type="text"  [(ngModel)]="search5">
     <ul>
       <li *ngFor="let s of getComplexTypesExtends() | filter:[{field:'n1.n2.valor2', value: search5}, {field:'n1.valor1', value: search5}, {field:'nome', value: search5}]">
@@ -76,7 +76,7 @@ And, enjoy....
       </li>
     </ul>
 
-### Filtering nonexistent field - 'Valor' in nonexistent nível 3
+### Filtering nonexistent field - 'Valor' in nonexistent level 3
     <input type="text"  [(ngModel)]="search4">
     <ul>
       <li *ngFor="let s of getComplexTypesExtends() | filter:[{field:'n1.n2.n3.valor3', value: search4}]">
@@ -84,6 +84,7 @@ And, enjoy....
       </li>
     </ul>
 
+This component work with infinite attribute level...
 
 # Project info - source code
 
