@@ -1,6 +1,6 @@
 {
   "name": "w-ng5",
-  "version": "0.0.9b8",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -15,15 +15,17 @@
     "type": "git",
     "url": "https://github.com/wquintanilhadasilva/w-ng5"
   },
-  "keywords": ["filters", "Filter for ngFor"],
+  "keywords": [
+    "filters",
+    "Filter for ngFor"
+  ],
   "bugs": {
     "url": "https://github.com/wquintanilhadasilva/w-ng5"
   },
   "author": "Wedson Quintanilha da Silva",
   "homepage": "https://github.com/wquintanilhadasilva/w-ng5",
   "private": false,
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@angular/animations": "^5.2.0",
     "@angular/common": "^5.2.0",
@@ -37,7 +39,6 @@
     "core-js": "^2.4.1",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19",
-
     "@angular/cli": "1.6.6",
     "@angular/compiler-cli": "^5.2.0",
     "@angular/language-service": "^5.2.0",
