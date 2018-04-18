@@ -62,7 +62,11 @@ export class FilterPipe implements PipeTransform {
       return this.parseValue(item, filter.value, filter.field);
       // return false;
     } else {
-      return item[filter.field].toString().toLowerCase().indexOf(filter.value.toString().toLowerCase()) !== -1;
+      if (item[filter.field]) {
+          return item[filter.field].toString().toLowerCase().indexOf(filter.value.toString().toLowerCase()) !== -1;
+      }else {
+          return false;
+      }
     }
   }
 
