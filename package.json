@@ -1,6 +1,6 @@
 {
   "name": "w-ng5",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -17,7 +17,17 @@
   },
   "keywords": [
     "filters",
-    "Filter for ngFor"
+    "ngFor",
+    "angular",
+    "angular5",
+    "pipes",
+    "complex type",
+    "multi fields",
+    "search",
+    "angular filters",
+    "angular pipes",
+    "ngfor pipe",
+    "ngfor filter"
   ],
   "bugs": {
     "url": "https://github.com/wquintanilhadasilva/w-ng5"
