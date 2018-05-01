@@ -58,7 +58,17 @@
   <label>Filtro campo que não existe - Valor Nível 3</label>
   <input type="text"  [(ngModel)]="search4">
   <ul>
-    <li *ngFor="let s of getComplexTypesExtends() | filter:[{field:'n1.n2.n3.valor3', value: search4}]">
+    <li *ngFor="let s of getComplexTypesExtends() | filter:[{field: 'n1.n2.n3.valor3', value: search4}]">
+      {{s.nome}} - {{s.idade}} - {{s.n1.valor1}} - {{s.n1.n2.valor2}}
+    </li>
+  </ul>
+</section>
+
+<section>
+<label>Injetando Pipe no Componente</label>
+  <input type="text"  [(ngModel)]="search5">
+  <ul>
+    <li *ngFor="let s of filtrar(search5)">
       {{s.nome}} - {{s.idade}} - {{s.n1.valor1}} - {{s.n1.n2.valor2}}
     </li>
   </ul>

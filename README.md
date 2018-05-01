@@ -84,6 +84,43 @@ And, enjoy....
       </li>
     </ul>
 
+
+### Filtering using inject FilterPipe in constructor of component
+
+#### TypeScript method: 
+
+Define a provider:
+    @Component({
+      selector: 'app-root',
+      templateUrl: './app.component.html',
+      styleUrls: ['./app.component.css'],
+      providers: [FilterPipe]
+    })
+
+If your prefer, import component in the provider section of app.module
+
+Then import the pipe into the component constructor ...
+    
+    constructor(private pipe: FilterPipe) {}
+
+And, create a method will return a array of data to view
+
+    public dataSource(textFilter) {
+      const r = this.pipe.transform(this.getComplexTypesExtends(),
+                                   [{field: 'n1.n2.valor2', value: textFilter}]);
+      return r;
+    }
+
+... after, using this method on ngFor directive in the template html:
+
+    <input type="text"  [(ngModel)]="search5">
+    <ul>
+      <li *ngFor="let s of dataSource(search5)">
+        {{s.nome}} - {{s.idade}} - {{s.n1.valor1}} - {{s.n1.n2.valor2}}
+      </li>
+    </ul>
+
+
 This component work with infinite attribute level...
 
 # Project info - source code

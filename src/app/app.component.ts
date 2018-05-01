@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FilterPipe } from '../..';
 
 export interface IUser {
   nome: string;
@@ -8,11 +9,14 @@ export interface IUser {
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [FilterPipe]
 })
 export class AppComponent {
   title = 'app';
 
+  constructor(private pipe: FilterPipe) {
+  }
 
   getStrings() {
     const retorno = [];
@@ -50,6 +54,12 @@ export class AppComponent {
     }
     return retorno;
 
+  }
+
+  public filtrar(search4) {
+    const r = this.pipe.transform(this.getComplexTypesExtends(),
+                                  [{field: 'n1.n2.valor2', value: search4}]);
+    return r;
   }
 
 }
