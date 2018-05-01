@@ -90,6 +90,10 @@ And, enjoy....
 #### TypeScript method: 
 
 Define a provider:
+    
+    // Import component to use in this code
+    import { FilterPipe } from 'w-ng5';
+
     @Component({
       selector: 'app-root',
       templateUrl: './app.component.html',
@@ -103,7 +107,7 @@ Then import the pipe into the component constructor ...
     
     constructor(private pipe: FilterPipe) {}
 
-And, create a method will return a array of data to view
+And, create a method 'dataSource(param)' that will return a array of data to view
 
     public dataSource(textFilter) {
       const r = this.pipe.transform(this.getComplexTypesExtends(),
@@ -111,7 +115,7 @@ And, create a method will return a array of data to view
       return r;
     }
 
-... after, using this method on ngFor directive in the template html:
+... after, using this method 'dataSource(param)' on ngFor directive in the template html:
 
     <input type="text"  [(ngModel)]="search5">
     <ul>
