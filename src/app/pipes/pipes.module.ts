@@ -1,8 +1,7 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Pipe, PipeTransform, NgModule } from '@angular/core';
 
-import { Pipe, PipeTransform } from '@angular/core';
-
+import { FilterPipe } from './filter.pipe';
+/*
 export interface FilterParam {
   field: string;
   value: string;
@@ -64,7 +63,7 @@ export class FilterPipe implements PipeTransform {
     } else {
       if (item[filter.field]) {
           return item[filter.field].toString().toLowerCase().indexOf(filter.value.toString().toLowerCase()) !== -1;
-      }else {
+      } else {
           return false;
       }
     }
@@ -99,13 +98,11 @@ export class FilterPipe implements PipeTransform {
     }
   }
 
-}
+}*/
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
   declarations: [FilterPipe],
-  exports: [FilterPipe]
+  exports: [FilterPipe],
+  providers: [FilterPipe]
 })
 export class PipesModule { }
