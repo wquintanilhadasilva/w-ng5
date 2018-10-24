@@ -1,3 +1,4 @@
+// tslint:disable-next-line:no-implicit-dependencies
 import { Component } from '@angular/core';
 import { FilterPipe } from '../..';
 
@@ -9,14 +10,19 @@ export interface IUser {
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  providers: [FilterPipe]
+  styleUrls: ['./app.component.scss'],
+  providers: [FilterPipe],
 })
 export class AppComponent {
   title = 'app';
+  filtroString: string;
+  search: any;
+  search2: any;
+  search3: any;
+  search4: any;
+  search5: any;
 
-  constructor(private pipe: FilterPipe) {
-  }
+  constructor(private pipe: FilterPipe) {}
 
   getStrings() {
     const retorno = [];
@@ -29,7 +35,7 @@ export class AppComponent {
   getComplexType(): IUser[] {
     const retorno: IUser[] = [];
     for (let i = 0; i < 10; i++) {
-      retorno.push({nome: `Nome ${i}`, idade: i});
+      retorno.push({ nome: `Nome ${i}`, idade: i });
     }
     return retorno;
   }
@@ -52,14 +58,15 @@ export class AppComponent {
 
       retorno.push(objeto);
     }
-    return retorno;
 
+    retorno[0].n1.n2.valor2 = 'Pável';
+    return retorno;
   }
 
   public filtrar(search4) {
-    const r = this.pipe.transform(this.getComplexTypesExtends(),
-                                  [{field: 'n1.n2.valor2', value: search4}]);
+    const r = this.pipe.transform(this.getComplexTypesExtends(), [
+      { field: 'n1.n2.valor2', value: search4 },
+    ]);
     return r;
   }
-
 }
