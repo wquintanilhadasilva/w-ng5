@@ -1,7 +1,7 @@
 <section>
 
   <label>Filtro de String</label>
-  <input type="text"  [(ngModel)]="filtroString">
+  <input type="text" [(ngModel)]="filtroString">
 
   <ul>
     <li *ngFor="let s of getStrings() | filter:filtroString">
@@ -13,7 +13,7 @@
 
 <section>
   <label>Filtro de String Complexa - Valor Nível 2</label>
-  <input type="text"  [(ngModel)]="search">
+  <input type="text" [(ngModel)]="search">
 
   <ul>
     <li *ngFor="let s of getComplexTypesExtends() | filter:[{field:'n1.n2.valor2', value: search}]">
@@ -24,7 +24,7 @@
 
 <section>
   <label>Filtro de String Complexa - Campo no meio - Valor Nível 1</label>
-  <input type="text"  [(ngModel)]="search3">
+  <input type="text" [(ngModel)]="search3">
 
   <ul>
     <li *ngFor="let s of getComplexTypesExtends() | filter:[{field:'n1.valor1', value: search3}]">
@@ -35,7 +35,7 @@
 
 <section>
   <label>Filtro de Array complexo simples - Nome Nível 0</label>
-  <input type="text"  [(ngModel)]="search2">
+  <input type="text" [(ngModel)]="search2">
 
   <ul>
     <li *ngFor="let s of getComplexTypesExtends() | filter:[{field:'nome', value: search2}]">
@@ -46,7 +46,7 @@
 
 <section>
   <label>Filtro em três campos - Valor Nível 2 ou Valor Nível 1 ou Nome Nível 0</label>
-  <input type="text"  [(ngModel)]="search5">
+  <input type="text" [(ngModel)]="search5">
   <ul>
     <li *ngFor="let s of getComplexTypesExtends() | filter:[{field:'n1.n2.valor2', value: search5}, {field:'n1.valor1', value: search5}, {field:'nome', value: search5}]">
       {{s.nome}} - {{s.idade}} - {{s.n1.valor1}} - {{s.n1.n2.valor2}}
@@ -56,7 +56,7 @@
 
 <section>
   <label>Filtro campo que não existe - Valor Nível 3</label>
-  <input type="text"  [(ngModel)]="search4">
+  <input type="text" [(ngModel)]="search4">
   <ul>
     <li *ngFor="let s of getComplexTypesExtends() | filter:[{field: 'n1.n2.n3.valor3', value: search4}]">
       {{s.nome}} - {{s.idade}} - {{s.n1.valor1}} - {{s.n1.n2.valor2}}
@@ -65,8 +65,8 @@
 </section>
 
 <section>
-<label>Injetando Pipe no Componente</label>
-  <input type="text"  [(ngModel)]="search5">
+  <label>Injetando Pipe no Componente</label>
+  <input type="text" [(ngModel)]="search5">
   <ul>
     <li *ngFor="let s of filtrar(search5)">
       {{s.nome}} - {{s.idade}} - {{s.n1.valor1}} - {{s.n1.n2.valor2}}
