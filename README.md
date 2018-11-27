@@ -1,5 +1,9 @@
 # w-ng5 accelerator web components
 
+**ATENTION: THIS COMPONENT HAS BEEN MIGRATED FOR THE REPOSITORY [wngx-library](https://github.com/wquintanilhadasilva/wngx-library) COMPATIBLE WITH VERSION 7 OF ANGULAR!!**
+
+**New package for more recent version: [NPM PACKAGE](https://www.npmjs.com/package/wngx-filter)**
+
 Angular Generic Filters to *ngFor
 
 # Objective
